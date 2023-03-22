@@ -1,0 +1,6 @@
+git.apache.org/thrift.git v0.0.0-20151001171628-53dd39833a08 h1:goxS3HZARSCj217iYEtwVahA/7WJ9MbZR2QJMeMDmxM=
+git.apache.org/thrift.git v0.0.0-20151001171628-53dd39833a08/go.mod h1:fPE2ZNJGynbRyZ4dJvy6G277gSllfV2HJqblrnkyeyg=
+github.com/beltran/gosasl v0.0.0-20230115020419-e3b503e58833 h1:3mDCea/Jo3bCaS62fNuKeNai/zaNjSOjU4hQ6SWixnU=
+github.com/beltran/gosasl v0.0.0-20230115020419-e3b503e58833/go.mod h1:Qx8cW6jkI8riyzmklj80kAIkv+iezFUTBiGU0qHhHes=
+github.com/beltran/gssapi v0.0.0-20200324152954-d86554db4bab h1:ayfcn60tXOSYy5zUN1AMSTQo4nJCf7hrdzAVchpPst4=
+github.com/beltran/gssapi v0.0.0-20200324152954-d86554db4bab/go.mod h1:GLe4UoSyvJ3cVG+DVtKen5eAiaD8mAJFuV5PT3Eeg9Q=
