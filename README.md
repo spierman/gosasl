@@ -1,4 +1,4 @@
-# go keberos sasl authtication steps
+# go Kerberos sasl authtication steps
 ## 1. go
     go 1.19
 ## 2. basic software
