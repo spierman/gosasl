@@ -22,7 +22,8 @@
 ## 4.export env
     export KRB5CCNAME={your file path}
     export KRB5_CONFIG={your file path}
-## 5. run & build
+## 5. install & run & build
+    go get github.com/spierman/gosasl
     go run -tags kerberos {XX}.go
     go build -tags kerberos {XX}.go
 ## 6. example code
