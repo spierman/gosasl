@@ -15,7 +15,7 @@
     go get git.apache.org/thrift.git/lib/go/thrift@0.9.3
 ### 3.2 go gosasl
     go get -tags kerberos github.com/beltran/gosasl
-### 3.3 thrift hbase client
+### 3.3 thrift hbase client(already integration,pass to 4)
     tar -zxvf hbase-1.2.6.1-src-tar.gz && cd hbase-1.2.6.1
     thrift --out ./ --gen go ./hbase-thrift/src/main/resources/org/apache/hadoop/hbase/thrift/Hbase.thrift
     cp -r ./hbase/* {you application dir}
