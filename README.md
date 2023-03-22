@@ -20,8 +20,8 @@
     thrift --out ./ --gen go ./hbase-thrift/src/main/resources/org/apache/hadoop/hbase/thrift/Hbase.thrift
     cp -r ./hbase/* {you application dir}
 ## 4.export env
-    export KRB5CCNAME={your file paht}
-    export KRB5_CONFIG={your file paht}
+    export KRB5CCNAME={your file path}
+    export KRB5_CONFIG={your file path}
 ## 5. run & build
     go run -tags kerberos {XX}.go
     go build -tags kerberos {XX}.go
