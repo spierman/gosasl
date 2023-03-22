@@ -32,10 +32,10 @@
     )
 
     func main() {
-        host := "hdp416.bigdata.zzt.qianxin-inc.cn"
+        host := "XX.com"
         port := 9090
-        table := "prism:site_archive_basic_stats"
-        connection, err := sasl.Connect(host, port, krb5.WithGSSAPISaslTransport("hbase"))
+        table := "aa"
+        connection, err := sasl.Connect(host, port, sasl.WithGSSAPISaslTransport("hbase"))
         if err != nil {
             log.Fatal("Error connecting", err)
             return
