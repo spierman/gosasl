@@ -19,6 +19,9 @@
     tar -zxvf hbase-1.2.6.1-src-tar.gz && cd hbase-1.2.6.1
     thrift --out ./ --gen go ./hbase-thrift/src/main/resources/org/apache/hadoop/hbase/thrift/Hbase.thrift
     cp -r ./hbase/* {you application dir}
+## export env
+    export KRB5CCNAME={your file paht}
+    export KRB5_CONFIG={your file paht}
 ## 4. run & build
     go run -tags kerberos {XX}.go
     go build -tags kerberos {XX}.go
