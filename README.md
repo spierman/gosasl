@@ -32,7 +32,8 @@
         "fmt"
         "log"
         "os"
-        "github.com/spierman/gosasl"
+        sasl "github.com/spierman/gosasl"
+	"github.com/spierman/gosasl/hbase"
     )
 
     func main() {
