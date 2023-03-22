@@ -19,13 +19,13 @@
     tar -zxvf hbase-1.2.6.1-src-tar.gz && cd hbase-1.2.6.1
     thrift --out ./ --gen go ./hbase-thrift/src/main/resources/org/apache/hadoop/hbase/thrift/Hbase.thrift
     cp -r ./hbase/* {you application dir}
-## export env
+## 4.export env
     export KRB5CCNAME={your file paht}
     export KRB5_CONFIG={your file paht}
-## 4. run & build
+## 5. run & build
     go run -tags kerberos {XX}.go
     go build -tags kerberos {XX}.go
-## 5. example code
+## 6. example code
     ```
     import (
         "fmt"
@@ -52,7 +52,7 @@
         fmt.Printf("rst {%s}\n", isExists)
     }
     ```
-## 6. issuse
+## 7. issuse
     if the hbase.go report error,please replace like this
     ```
     replace temp  to  string(temp[:])
