@@ -1,4 +1,4 @@
-# go keberos sasl authtication steps
+# go Kerberos sasl authtication steps
 ## 1. go
     go 1.19
 ## 2. basic software
@@ -15,27 +15,32 @@
     go get git.apache.org/thrift.git/lib/go/thrift@0.9.3
 ### 3.2 go gosasl
     go get -tags kerberos github.com/beltran/gosasl
-### 3.3 thrift hbase client
+### 3.3 thrift hbase client(already integration,pass to 4)
     tar -zxvf hbase-1.2.6.1-src-tar.gz && cd hbase-1.2.6.1
     thrift --out ./ --gen go ./hbase-thrift/src/main/resources/org/apache/hadoop/hbase/thrift/Hbase.thrift
     cp -r ./hbase/* {you application dir}
-## 4. run & build
+## 4.export env
+    export KRB5CCNAME={your file path}
+    export KRB5_CONFIG={your file path}
+## 5. install & run & build
+    go get github.com/spierman/gosasl
     go run -tags kerberos {XX}.go
     go build -tags kerberos {XX}.go
-## 5. example code
+## 6. example code
     ```
     import (
         "fmt"
         "log"
         "os"
-        "github.com/spierman/gosasl"
+        sasl "github.com/spierman/gosasl"
+	"github.com/spierman/gosasl/hbase"
     )
 
     func main() {
-        host := "hdp416.bigdata.zzt.qianxin-inc.cn"
+        host := "XX.com"
         port := 9090
-        table := "prism:site_archive_basic_stats"
-        connection, err := sasl.Connect(host, port, krb5.WithGSSAPISaslTransport("hbase"))
+        table := "aa"
+        connection, err := sasl.Connect(host, port, sasl.WithGSSAPISaslTransport("hbase"))
         if err != nil {
             log.Fatal("Error connecting", err)
             return
@@ -49,7 +54,7 @@
         fmt.Printf("rst {%s}\n", isExists)
     }
     ```
-## 6. issuse
+## 7. issuse
     if the hbase.go report error,please replace like this
     ```
     replace temp  to  string(temp[:])
